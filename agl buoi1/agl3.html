@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./angular.min.js"></script>
+    <title>Document</title>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    <div>
+        FisrtName: <input type="text" ng-model="em.FisrtName">
+        LastName: <input type="text" ng-model="em.LastName">
+        Gender:<select name="Gender" ng-model="em.Gender">
+            <option value="female">female</option>
+            <option value="male">male</option>
+        </select>
+    </div>
+    <div> 
+        FisrtName: {{em.FisrtName}} <br>
+        LastName: {{em.LastName}} <br>
+        Gender: {{em.Gender}} <br>
+    </div>
+    <script>
+        var sum= (a,b)=>a+b
+        console.log(sum(2,2))
+    </script>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope) {
+            var emoployee = {
+                FisrtName:'Thinh',
+                LastName: 'nguyen',
+                Gender: '',
+            };
+            $scope.em = emoployee;
+        });
+
+    </script>
+</body>
+</body>
+</html>
